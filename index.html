@@ -1,0 +1,32 @@
+<html>
+<head>
+  <!-- power-sword deps -->
+  <script src="bower_components/traverson/browser/dist/traverson.js"></script>
+  <script src="bower_components/rsvp/rsvp.js"></script>
+
+  <script src="js/power-sword.js"></script>
+</head>
+<body>
+  Look at js console for more exciting stuff.
+
+  <script>
+    powerSword = new PowerSword(RSVP);
+
+    powerSword.getRootLinks().then(function (links) {
+      console.log("root links");
+      console.log(links);
+    });
+
+    powerSword.getUseCases().then(function (use_cases) {
+      console.log("use cases");
+      console.log(use_cases);
+      use_case = use_cases[0];
+      console.log("first use case");
+      console.log(use_case);
+      powerSword.generateDataset({use_case: encodeURIComponent(use_case._links.self.href)}).then(function (jc) {
+        console.log(jc);
+      });
+    });
+  </script>
+</body>
+</html>

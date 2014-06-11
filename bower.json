@@ -1,0 +1,26 @@
+{
+  "name": "power-sword",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pikimal/power-sword",
+  "authors": [
+    "Thomas Harris <thomas@webkite.com>"
+  ],
+  "description": "js client for WebKite admin",
+  "main": "js/power-sword.js",
+  "keywords": [
+    "WebKite"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "traverson": "~0.8.1",
+    "rsvp": "~3.0.8",
+    "underscore": "~1.6.0"
+  }
+}

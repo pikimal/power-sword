@@ -25,13 +25,13 @@
     <h3 class="title">WebKite WordPress Lists</h3>
     <p class="lead double-lead">
       These lists are set up to use in WordPress. If you have other lists that you would like to show in WordPress or if you would like to create a new list, you do that on the
-      <a href="http://localhost:4200/">WebKite Admin Panel</a>.
+      <a href="{{config.webkite_admin_url}}">WebKite Admin Panel</a>.
     </p>
   {{else}}
     <h3 class="title">You have not set up any lists to show in WordPress.</h3>
     <p class="lead double-lead">
       If you have lists that you would like to show in WordPress or if you would like to create
-      a new list, you can go to <a href="http://localhost:4200/">WebKite Admin</a>.
+      a new list, you can go to <a href="{{config.webkite_admin_url}}">WebKite Admin</a>.
     </p>
   {{/if}}
   <ul class="subsubsub">
@@ -70,17 +70,15 @@
             Shortcode: [webkite-results jc={{_links.jafar_configuration.0.id}}]
           </div>
         </td>
-        <td class="list-table-created">{{created_date}}</td>
-        <td class="list-table-synced">
-          {{last_synced_date}}
-        </td>
+        <td class="list-table-created">{{calendarFormat created_date}}</td>
+        <td class="list-table-synced">{{calendarFormat last_synced_date}}</td>
         <td class="list-table-actions">
-          <a href="http://localhost:4200/#/lists/{{uuid}}/settings/wordpress" target="krang">
+          <a href="{{../config.webkite_admin_url}}/#/lists/{{uuid}}/settings/wordpress" target="krang">
             Edit Settings
           </a>
         </td>
         <td class="list-table-actions">
-          <a href="http://localhost:4200/#/lists/{{uuid}}/spreadsheet" target="krang">
+          <a href="{{../config.webkite_admin_url}}/#/lists/{{uuid}}/spreadsheet" target="krang">
             Edit Spreadsheet
           </a>
         </td>

@@ -83,7 +83,28 @@
           </a>
         </td>
       </tr>
+    {{else}}
+      <tr>
+        <td><i>No lists set up for Wordpress yet.</i></td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
     {{/each}}
+    <tfoot>
+      <tr>
+        <th class="list-table-spreadsheet">
+          Webkite Lists
+        </th>
+        <th class="list-table-created">
+          Created
+        </th>
+        <th class="list-table-synced">
+          Synced
+        </th>
+        <th class="list-table-actions" colspan="2">Actions</th>
+      </tr>
+    </tfoot>
     </tbody>
   </table>
 </div></div>

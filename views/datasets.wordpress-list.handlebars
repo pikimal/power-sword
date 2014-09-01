@@ -49,25 +49,21 @@
     </colgroup>
     <thead>
       <tr>
-        <th class="list-table-spreadsheet">
-          Webkite Lists
-        </th>
-        <th class="list-table-created">
-          Created
-        </th>
-        <th class="list-table-synced">
-          Synced
-        </th>
+        <th class="list-table-spreadsheet" colspan="2">Webkite Lists</th>
+        <th class="list-table-created">Created</th>
+        <th class="list-table-synced">Synced</th>
         <th class="list-table-actions" colspan="2">Actions</th>
       </tr>
     </thead>
     <tbody>
     {{#each model}}
       <tr>
-        <td class="list-table-spreadsheet">
+        <td class="list-table-spreadsheet" colspan="2">
           <div><em>{{name}}</em></div>
-          <div class="list-actions-secondary action">
-            Shortcode: [webkite-results jc={{_links.jafar_configuration.0.id}}]
+          <div class="list-table-spreadsheet-byline">
+            <span class="shortcode" title="Shortcode">
+              [webkite-jc jc={{_links.jafar_configuration.0.id}}]
+            </span>
           </div>
         </td>
         <td class="list-table-created">{{calendarFormat created_date}}</td>
@@ -85,7 +81,7 @@
       </tr>
     {{else}}
       <tr>
-        <td><i>No lists set up for Wordpress yet.</i></td>
+        <td colspan="2"><i>No lists set up for Wordpress yet.</i></td>
         <td>-</td>
         <td>-</td>
         <td>-</td>
@@ -93,15 +89,9 @@
     {{/each}}
     <tfoot>
       <tr>
-        <th class="list-table-spreadsheet">
-          Webkite Lists
-        </th>
-        <th class="list-table-created">
-          Created
-        </th>
-        <th class="list-table-synced">
-          Synced
-        </th>
+        <th class="list-table-spreadsheet" colspan="2">Webkite Lists</th>
+        <th class="list-table-created">Created</th>
+        <th class="list-table-synced">Synced</th>
         <th class="list-table-actions" colspan="2">Actions</th>
       </tr>
     </tfoot>

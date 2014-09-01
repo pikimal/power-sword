@@ -1,0 +1,91 @@
+<div id="webkite_help">
+  <div class="postbox">
+    <h3>Help With Lists</h3>
+    <div class="inside">
+      <ul>
+        {{#if model.length}}
+          <li><a href="http://support.webkite.com/knowledgebase/articles/328199-how-do-i-update-my-list" target="_blank">How do I update a list?</a></li>
+        {{else}}
+          <li><a href="http://support.webkite.com/knowledgebase/articles/327898-what-is-a-list" target="_blank">What is a list?</a></li>
+        {{/if}}
+        <li><a href="http://support.webkite.com/knowledgebase/articles/327822-how-do-i-create-a-new-list" target="_blank">How do I create a new list?</a></li>
+        <li><a href="http://support.webkite.com/knowledgebase/articles/327878-what-is-the-difference-between-a-list-and-a-page" target="_blank">What is the difference between a list and a page?</a></li>
+        {{#if model.length}}
+          <li><a href="http://support.webkite.com/knowledgebase/articles/327937-how-do-i-sync-a-list" target="_blank">How do I sync a list?</a></li>
+        {{else}}
+          <li><a href="http://support.webkite.com/knowledgebase/articles/327880-what-does-it-mean-when-a-list-is-synced" target="_blank">What does it mean when a list is synced?</a></li>
+        {{/if}}
+        <li><a href="http://support.webkite.com/knowledgebase/articles/328166-how-do-i-publish-a-list" target="_blank">How do I publish a list?</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="webkite_content"><div class="webkite-content-wrap">
+  {{#if model.length}}
+    <h3 class="title">WebKite WordPress Lists</h3>
+    <p class="lead double-lead">
+      These lists are set up to use in WordPress. If you have other lists that you would like to show in WordPress or if you would like to create a new list, you do that on the
+      <a href="http://localhost:4200/">WebKite Admin Panel</a>.
+    </p>
+  {{else}}
+    <h3 class="title">You have not set up any lists to show in WordPress.</h3>
+    <p class="lead double-lead">
+      If you have lists that you would like to show in WordPress or if you would like to create
+      a new list, you can go to <a href="http://localhost:4200/">WebKite Admin</a>.
+    </p>
+  {{/if}}
+  <ul class="subsubsub">
+    <li class="all">
+      All <span class="count">({{model.length}})</span>
+    </li>
+  </ul>
+  <table class="wp-list-table widefat fixed lists" cellspacing="0">
+    <colgroup>
+      <col class="list-table-spreadsheet"></col>
+      <col class="list-table-created"></col>
+      <col class="list-table-synced"></col>
+      <col class="list-table-actions"></col>
+      <col class="list-table-actions"></col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th class="list-table-spreadsheet">
+          Webkite Lists
+        </th>
+        <th class="list-table-created">
+          Created
+        </th>
+        <th class="list-table-synced">
+          Synced
+        </th>
+        <th class="list-table-actions" colspan="2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+    {{#each model}}
+      <tr>
+        <td class="list-table-spreadsheet">
+          <div><em>{{name}}</em></div>
+          <div class="list-actions-secondary action">
+            Shortcode: [webkite-results jc={{_links.jafar_configuration.0.id}}]
+          </div>
+        </td>
+        <td class="list-table-created">{{created_date}}</td>
+        <td class="list-table-synced">
+          {{last_synced_date}}
+        </td>
+        <td class="list-table-actions">
+          <a href="http://localhost:4200/#/lists/{{uuid}}/settings/wordpress" target="krang">
+            Edit Settings
+          </a>
+        </td>
+        <td class="list-table-actions">
+          <a href="http://localhost:4200/#/lists/{{uuid}}/spreadsheet" target="krang">
+            Edit Spreadsheet
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+    </tbody>
+  </table>
+</div></div>

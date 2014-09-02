@@ -23,22 +23,18 @@
 <div id="webkite_content"><div class="webkite-content-wrap">
   {{#if model.length}}
     <h3 class="title">WebKite WordPress Lists</h3>
-    <p class="lead double-lead">
+    <p class="lead">
       These lists are set up to use in WordPress. If you have other lists that you would like to show in WordPress or if you would like to create a new list, you do that on the
       <a href="{{config.webkite_admin_url}}">WebKite Admin Panel</a>.
     </p>
   {{else}}
     <h3 class="title">You have not set up any lists to show in WordPress.</h3>
-    <p class="lead double-lead">
+    <p class="lead">
       If you have lists that you would like to show in WordPress or if you would like to create
       a new list, you can go to <a href="{{config.webkite_admin_url}}">WebKite Admin</a>.
     </p>
   {{/if}}
-  <ul class="subsubsub">
-    <li class="all">
-      All <span class="count">({{model.length}})</span>
-    </li>
-  </ul>
+
   <table class="wp-list-table widefat fixed lists" cellspacing="0">
     <colgroup>
       <col class="list-table-spreadsheet"></col>

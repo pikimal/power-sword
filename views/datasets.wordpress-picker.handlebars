@@ -1,0 +1,21 @@
+<div>
+  {{#if model.length}}
+
+    <p class="webkite-title">Select the list you would like to place.</p>
+    <p>Shortcode will be placed after the current paragraph.</p>
+    <select id="webkite_list_selector" name="webkite_list_selector">
+      {{#each model}}
+        <option value="{{_links.jafar_configuration.0.id}}">{{name}}</option>
+      {{/each}}
+    </select>
+
+  {{else}}
+
+    <p class="webkite-title">No Lists available for insertion.</p>
+    <p>You'll need to create a list before you can add one to a page.</p>
+    <select id="webkite_list_selector" name="webkite_list_selector" disabled>
+      <option value="" default selected>No Lists Created Yet</option>
+    </select>
+
+  {{/if}}
+</div>
